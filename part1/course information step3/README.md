@@ -1,1 +1,1 @@
-understanding how to manage javascript objects
+# Understanding how to manage javascript objects
