@@ -1,3 +1,3 @@
 # First instance of Anecdotes app
 
-## the app shows one of the anecdotes on an array. those anecdotes cycle through when the button is clicked
+## The app shows one of the anecdotes on an array. those anecdotes cycle through when the button is clicked
