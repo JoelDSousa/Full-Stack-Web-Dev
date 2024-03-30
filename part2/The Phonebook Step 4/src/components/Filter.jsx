@@ -1,9 +1,11 @@
 import { useState } from 'react';
 
 
-const Filter = ({newFilter, handleNewFilter}) =>{
+const Filter = ({updatePersons, persons}) =>{
 
-const changedPersons = [...persons] 
+    const [newFilter, setNewFilter] = useState('')
+   
+    const changedPersons = [...persons] 
     /*Must assign like this to let React know a new and different object was created
     Otherwise, if variable was assigned like so :
     const changedPersons = persons;
@@ -40,10 +42,6 @@ const changedPersons = [...persons]
       updatePersons(changedPersons);
      
     }
-
-
-
-
     
     return(<div>
     filter shown with:  
