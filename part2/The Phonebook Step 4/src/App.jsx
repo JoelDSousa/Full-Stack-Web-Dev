@@ -10,28 +10,18 @@ const App = () => {
     { name: 'Dan Abramov', number: '12-43-234345',show: true, id: 3 },
     { name: 'Mary Poppendieck', number: '39-23-6423122',show: true, id: 4 }
   ])
-
-  const [newFilter, setNewFilter] = useState('')
-
-  const handleNewFilter= (event)=>{
-    console.log(event.target.value);
-    setNewFilter(event.target.value);
-    for (let i = 0; i < persons.length; i++) {
-      if(event.target.value == ""){
-        persons[i].show = true;
-      }  
-      let result = persons[i].name.toLowerCase().match(event.target.value.toLowerCase());
-      if (result===null) {
-        persons[i].show = false; 
-      }  
-    }
+ const updatePersons = (updatedPersons)=>{
+    console.log('Updatedpersons:');
+    console.log(updatedPersons);
+    setPersons(updatedPersons)
     
   }
+  
 
   return (
     <div>
       <h2>Phonebook</h2>
-      <Filter handleNewFilter={handleNewFilter} newFilter={newFilter} />
+      <Filter updatePersons={updatePersons} persons={persons}/>
 
       
       <h3> Add a new</h3>
