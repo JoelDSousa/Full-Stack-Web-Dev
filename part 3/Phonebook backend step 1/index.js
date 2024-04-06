@@ -35,12 +35,12 @@ app.get('/', (request, response) => {
   response.send('<h1>Hello World!</h1>')
 })
 
-app.get('/api/phoneBooks', (request, response) => {
-  console.log('phoneBooks');
+app.get('/api/persons', (request, response) => {
+  
   response.json(phoneBooks)
 })
 
-app.get('/api/phoneBooks/:id', (request, response) => {
+app.get('/api/persons/:id', (request, response) => {
 
   const id = Number(request.params.id)
   const phoneBook = phoneBooks.find(phoneBook => phoneBook.id === id)
@@ -53,14 +53,14 @@ app.get('/api/phoneBooks/:id', (request, response) => {
   }
 })
 
-app.delete('/api/phoneBooks/:id', (request, response) => {
+app.delete('/api/persons/:id', (request, response) => {
   const id = Number(request.params.id)
   phoneBooks = phoneBooks.filter(phoneBook => phoneBook.id !== id)
   
   response.status(204).end()
 })
 
-app.post('/api/phoneBooks', (request, response) => {  
+app.post('/api/persons', (request, response) => {  
   if (!body.content) {
     return response.status(400).json({ 
       error: 'content missing' 
