@@ -1,0 +1,27 @@
+{
+  "name": "backend",
+  "version": "0.0.1",
+  "description": " First instance of the template for the application of Full stack open's part 3",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js",
+    "test": " echo \\\"Error: no test specified\\\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JoelDSousa/Full-Stack-Web-Dev.git#main"
+  },
+  "author": "Joel Sousa",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/JoelDSousa/Full-Stack-Web-Dev/issues"
+  },
+  "homepage": "https://github.com/JoelDSousa/Full-Stack-Web-Dev/tree/main#readme",
+  "dependencies": {
+    "express": "^4.19.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.0"
+  }
+}
